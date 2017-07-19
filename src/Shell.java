@@ -35,7 +35,7 @@ class Shell {
 			cd(path.substring(3, path.length())); //recurse on everything else
 		}
 		
-		if(path == "usr/..") { //go back to root. Reset to '/'
+		if(path.equals("usr/..")) { //go back to root. Reset to '/'
 			compiledPath = "/";
 		}
 		
@@ -46,7 +46,7 @@ class Shell {
 			compiledPath += path;
 		}
 		
-		if(path == "/") { //do nothing. Here for readability.
+		if(path.equals("/")) { //do nothing. Here for readability.
 		}
 		
 		return this;
